@@ -1,6 +1,8 @@
 # files
 hw1/data
 hw1/model
+hw2/data
+hw2/model
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
