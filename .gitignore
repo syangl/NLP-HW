@@ -3,6 +3,12 @@ hw1/data
 hw1/model
 hw2/data
 hw2/model
+hw3/data
+hw3/model
+hw4/hw4-1/data
+hw4/hw4-1/model
+hw4/hw4-2/data
+hw4/hw4-2/model
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
