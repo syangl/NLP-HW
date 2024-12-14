@@ -18,6 +18,13 @@ import math
 import time
 from pathlib import Path
 
+if not os.path.exists('fig'):
+    os.mkdir('fig')
+if not os.path.exists('model'):
+    os.mkdir('model')
+
+TRAIN_FLAG = False
+
 # 设置随机种子以确保结果可重复
 SEED = 20241212
 random.seed(SEED)
@@ -60,16 +67,16 @@ def load_data(data_path):
     test_src = (line.strip() for line in open(Path(data_path) / 'test.en', encoding='utf-8'))
     test_trg = (line.strip() for line in open(Path(data_path) / 'test.zh', encoding='utf-8'))
 
-    return ( # TODO: For debug
-        {'src': list(train_src)[:5], 'trg': list(train_trg)[:5]},
-        {'src': list(valid_src)[:5], 'trg': list(valid_trg)[:5]},
-        {'src': list(test_src)[:5], 'trg': list(test_trg)[:5]}
-    )
-    # return (
-    #     {'src': list(train_src), 'trg': list(train_trg)},
-    #     {'src': list(valid_src), 'trg': list(valid_trg)},
-    #     {'src': list(test_src), 'trg': list(test_trg)}
+    # return ( # For debug
+    #     {'src': list(train_src)[:5], 'trg': list(train_trg)[:5]},
+    #     {'src': list(valid_src)[:5], 'trg': list(valid_trg)[:5]},
+    #     {'src': list(test_src)[:5], 'trg': list(test_trg)[:5]}
     # )
+    return (
+        {'src': list(train_src), 'trg': list(train_trg)},
+        {'src': list(valid_src), 'trg': list(valid_trg)},
+        {'src': list(test_src), 'trg': list(test_trg)}
+    )
 
 
 # 假设data_path是你的数据路径
@@ -427,7 +434,9 @@ model = Transformer(
     device=device,
     max_length=MAX_LENGTH,
 ).to(device)
-print(model)
+# 模型结构写入文件
+with open("model/model_structure.txt", "w", encoding="utf-8") as f:
+    f.write(str(model))
 
 optimizer = optim.Adam(model.parameters(), lr=0.0001)
 criterion = nn.CrossEntropyLoss(ignore_index=TRG_PAD_IDX)
@@ -443,12 +452,12 @@ def train_epoch(model, dataloader, optimizer, criterion, clip):
 
         output_dim = output.shape[-1]
         output = output.contiguous().view(-1, output_dim)
-        trg = trg[1:].contiguous().view(-1)
+        trg = trg.contiguous().view(-1)
 
         loss = criterion(output, trg)
         loss.backward()
 
-        torch.nn.utils.clip_grad_norm_(model.parameters(), clip)
+        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=clip)  # 梯度裁剪
         optimizer.step()
 
         epoch_loss += loss.item()
@@ -460,11 +469,11 @@ def evaluate(model, dataloader, criterion):
     epoch_loss = 0
     with torch.no_grad():
         for src, trg in dataloader:
-            output = model(src, trg[:-1, :])
+            output = model(src, trg)
 
             output_dim = output.shape[-1]
             output = output.contiguous().view(-1, output_dim)
-            trg = trg[1:].contiguous().view(-1)
+            trg = trg.contiguous().view(-1)
 
             loss = criterion(output, trg)
             epoch_loss += loss.item()
@@ -479,59 +488,70 @@ def epoch_time(start_time, end_time):
 
 
 def plot_loss(train_lossv, train_pplv, valid_lossv, valid_pplv, path):
-    plt.figure(figsize=(10, 5))
-    plt.subplot(1, 2, 1)  # (nrows, ncols, index)
-    plt.plot(train_lossv, label='train loss', color='blue')
-    plt.plot(valid_lossv, label='valid loss', color='red')
+    # 创建2x1的子图布局
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8))
 
-    plt.subplot(1, 2, 2) # (nrows, ncols, index)
-    plt.plot(train_pplv, label='train ppl', color='blue')
-    plt.plot(valid_pplv, label='valid ppl', color='red')
-
+    epochs = range(1, len(train_lossv) + 1)
+    # 绘制训练和验证的损失
+    ax1.plot(epochs, train_lossv, 'bo-', label='Training Loss')
+    ax1.plot(epochs, valid_lossv, 'ro-', label='Validation Loss')
+    ax1.set_title('Training and Validation Loss')
+    ax1.set_xlabel(f"Epochs(*{STRIP})")
+    ax1.set_ylabel('Loss')
+    ax1.legend()
+    # 绘制训练和验证的困惑度
+    ax2.plot(epochs, train_pplv, 'bo-', label='Training Perplexity')
+    ax2.plot(epochs, valid_pplv, 'ro-', label='Validation Perplexity')
+    ax2.set_title('Training and Validation Perplexity')
+    ax2.set_xlabel(f"Epochs(*{STRIP})")
+    ax2.set_ylabel('Perplexity')
+    ax2.legend()
+    # 调整子图之间的间距
+    plt.tight_layout()
     plt.savefig(path)
+    plt.show()
 
-N_EPOCHS = 10
-CLIP = 1
+if TRAIN_FLAG == True:
+    # Train
+    N_EPOCHS = 100
+    STRIP = 10
+    CLIP = 1  # 梯度裁剪，防止梯度爆炸
 
-best_valid_loss = float('inf')
-train_lossv = []
-train_pplv = []
-valid_lossv = []
-valid_pplv = []
-for epoch in tqdm(range(N_EPOCHS)):
+    best_valid_loss = float('inf')
+    train_lossv = []
+    train_pplv = []
+    valid_lossv = []
+    valid_pplv = []
+    for epoch in range(N_EPOCHS):
 
-    start_time = time.time()
+        start_time = time.time()
 
-    train_loss = train_epoch(model, train_loader, optimizer, criterion, CLIP)
-    valid_loss = evaluate(model, valid_loader, criterion)
+        train_loss = train_epoch(model, train_loader, optimizer, criterion, CLIP)
+        valid_loss = evaluate(model, valid_loader, criterion)
 
-    end_time = time.time()
+        end_time = time.time()
 
-    epoch_mins, epoch_secs = epoch_time(start_time, end_time)
+        epoch_mins, epoch_secs = epoch_time(start_time, end_time)
 
-    if valid_loss < best_valid_loss:
-        best_valid_loss = valid_loss
-        torch.save(model.state_dict(), 'transformer.pth')
+        # if valid_loss < best_valid_loss:
+        #     best_valid_loss = valid_loss
+        #     torch.save(model.state_dict(), 'model/transformer.pth')
 
-    print(f'Epoch: {epoch + 1:02} | Time: {epoch_mins}m {epoch_secs}s')
-    print(f'\tTrain Loss: {train_loss:.3f} | Train PPL: {math.exp(train_loss):7.3f}')
-    print(f'\t Val. Loss: {valid_loss:.3f} |  Val. PPL: {math.exp(valid_loss):7.3f}')
-    train_lossv.append(train_loss)
-    valid_lossv.append(valid_loss)
-    train_pplv.append(math.exp(train_loss))
-    valid_pplv.append(math.exp(valid_loss))
+        if (epoch+1) % STRIP == 0:
+            print(f'\r\tEpoch: {epoch + 1:02} | Time: {epoch_mins}m {epoch_secs}s', end='')
+            print(f'\tTrain Loss: {train_loss:.3f} | Train PPL: {math.exp(train_loss):7.3f}', end='')
+            print(f'\t Val. Loss: {valid_loss:.3f} |  Val. PPL: {math.exp(valid_loss):7.3f}')
+            train_lossv.append(train_loss)
+            valid_lossv.append(valid_loss)
+            train_pplv.append(math.exp(train_loss))
+            valid_pplv.append(math.exp(valid_loss))
 
-# 保存图像
-if not os.path.exists('fig'):
-    os.mkdir('fig')
-plot_loss(train_lossv, train_pplv, valid_lossv, valid_pplv, 'fig/loss.png')
+    # 保存图像
+    plot_loss(train_lossv, train_pplv, valid_lossv, valid_pplv, 'fig/loss.png')
 
 # 测试模型
-model.load_state_dict(torch.load('transformer.pth'))
-
+model.load_state_dict(torch.load('model/transformer.pth'))
 test_loss = evaluate(model, test_loader, criterion)
-
-print(f'| Test Loss: {test_loss:.3f} | Test PPL: {math.exp(test_loss):7.3f} |')
-
+print(f'| Test Loss: {test_loss:.3f} | Test PPL: {math.exp(test_loss):7.3f}')
 
 
