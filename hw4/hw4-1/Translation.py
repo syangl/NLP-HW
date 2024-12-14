@@ -18,8 +18,8 @@ import math
 import time
 from pathlib import Path
 
-if not os.path.exists('fig'):
-    os.mkdir('fig')
+if not os.path.exists('out'):
+    os.mkdir('out')
 if not os.path.exists('model'):
     os.mkdir('model')
 
@@ -67,28 +67,27 @@ def load_data(data_path):
     test_src = (line.strip() for line in open(Path(data_path) / 'test.en', encoding='utf-8'))
     test_trg = (line.strip() for line in open(Path(data_path) / 'test.zh', encoding='utf-8'))
 
-    # return ( # For debug
-    #     {'src': list(train_src)[:5], 'trg': list(train_trg)[:5]},
-    #     {'src': list(valid_src)[:5], 'trg': list(valid_trg)[:5]},
-    #     {'src': list(test_src)[:5], 'trg': list(test_trg)[:5]}
-    # )
-    return (
-        {'src': list(train_src), 'trg': list(train_trg)},
-        {'src': list(valid_src), 'trg': list(valid_trg)},
-        {'src': list(test_src), 'trg': list(test_trg)}
+    return ( # For debug
+        {'src': list(train_src)[:5], 'trg': list(train_trg)[:5]},
+        {'src': list(valid_src)[:5], 'trg': list(valid_trg)[:5]},
+        {'src': list(test_src)[:5], 'trg': list(test_trg)[:5]}
     )
+    # return (
+    #     {'src': list(train_src)[:15000], 'trg': list(train_trg)[:15000]},
+    #     {'src': list(valid_src)[:15000], 'trg': list(valid_trg)[:15000]},
+    #     {'src': list(test_src)[:15000], 'trg': list(test_trg)[:15000]}
+    # )
 
 
-# 假设data_path是你的数据路径
 train_data, valid_data, test_data = load_data(data_path='data/en-zh/')
 
 SRC_VOCAB = build_vocab_from_iterator(yield_tokens(train_data['src'], SRC_TOKENIZER),
                                       specials=["<unk>", "<pad>", "<bos>", "<eos>"])
 TRG_VOCAB = build_vocab_from_iterator(yield_tokens(train_data['trg'], TRG_TOKENIZER),
                                       specials=["<unk>", "<pad>", "<bos>", "<eos>"])
-
 SRC_VOCAB.set_default_index(SRC_VOCAB["<unk>"])
 TRG_VOCAB.set_default_index(TRG_VOCAB["<unk>"])
+
 
 def collate_batch(batch):
     """
@@ -136,7 +135,7 @@ train_dataset = TranslationDataset(train_data['src'], train_data['trg'], SRC_VOC
 valid_dataset = TranslationDataset(valid_data['src'], valid_data['trg'], SRC_VOCAB, TRG_VOCAB)
 test_dataset = TranslationDataset(test_data['src'], test_data['trg'], SRC_VOCAB, TRG_VOCAB)
 
-BATCH_SIZE = 128
+BATCH_SIZE = 64
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, collate_fn=collate_batch)
@@ -420,7 +419,8 @@ FORWARD_EXPANSION = 4
 HEADS = 8
 DROPOUT = 0.10
 # 统计训练数据最大长度
-MAX_LENGTH = max(max([ len(x) for x, _ in train_loader]), max([ len(y) for _, y in train_loader])) + 1
+MAX_LENGTH = max(max([ x.shape[1] for x, _ in train_loader]), max([ y.shape[1] for _, y in train_loader])) + 1
+print("MAX_LENGTH:", MAX_LENGTH)
 
 model = Transformer(
     src_vocab_size=len(SRC_VOCAB),
@@ -513,8 +513,9 @@ def plot_loss(train_lossv, train_pplv, valid_lossv, valid_pplv, path):
     plt.show()
 
 if TRAIN_FLAG == True:
+    print("Training...")
     # Train
-    N_EPOCHS = 100
+    N_EPOCHS = 500
     STRIP = 10
     CLIP = 1  # 梯度裁剪，防止梯度爆炸
 
@@ -536,7 +537,7 @@ if TRAIN_FLAG == True:
 
         if valid_loss < best_valid_loss:
             best_valid_loss = valid_loss
-            torch.save(model.state_dict(), 'model/transformer.pth')
+            torch.save(model.state_dict(), 'model/transformer_model.pth')
 
         if (epoch+1) % STRIP == 0:
             print(f'\r\tEpoch: {epoch + 1:02} | Time: {epoch_mins}m {epoch_secs}s', end='')
@@ -548,11 +549,24 @@ if TRAIN_FLAG == True:
             valid_pplv.append(math.exp(valid_loss))
 
     # 保存图像
-    plot_loss(train_lossv, train_pplv, valid_lossv, valid_pplv, 'fig/loss.png')
+    plot_loss(train_lossv, train_pplv, valid_lossv, valid_pplv, 'out/loss.png')
+    print(f"Training finished!")
 
-# 测试模型
-model.load_state_dict(torch.load('model/transformer.pth'))
+# Test
+print("Testing...")
+model.load_state_dict(torch.load('model/transformer_model.pth'))
 test_loss = evaluate(model, test_loader, criterion)
-print(f'| Test Loss: {test_loss:.3f} | Test PPL: {math.exp(test_loss):7.3f}')
-
-
+print(f'| Test Avg Loss: {test_loss:.3f} | Test Avg PPL: {math.exp(test_loss):7.3f}')
+with open("out/test_result.txt", "w", encoding="utf-8") as f:
+    f.write(f"Test Loss: {test_loss:.3f} | Test PPL: {math.exp(test_loss):7.3f}\n\n")
+    model.eval()
+    for src, trg in test_loader:
+        output = model(src, trg)
+        pred_trg = output.argmax(dim=-1)
+        for i in range(len(pred_trg)):
+            # 按词表转换成字符串
+            src_str = " ".join([SRC_VOCAB.get_itos()[x] for x in src[i].tolist()])
+            pred_str = " ".join([TRG_VOCAB.get_itos()[x] for x in pred_trg[i].tolist()])
+            trg_str = " ".join([TRG_VOCAB.get_itos()[x] for x in trg[i].tolist()])
+            f.write(f"src_str ---> {src_str}\n\t\tpred_str ---> {pred_str}\n\t\ttrue_str---> {trg_str}\n\n")
+print("Testing finished!")

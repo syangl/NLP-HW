@@ -1,0 +1,22 @@
+Test Loss: 0.035 | Test PPL:   1.035
+
+src_str ---> <bos> It can be a very complicated thing , the ocean . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 海洋 是 一个 非常 复杂 的 事物 。 <eos> <eos> <eos> <eos> <eos> 事物 事物 事物 <eos> <eos> <eos> <eos> 海洋 <eos> <eos> <eos> <eos> <eos> <eos> <eos> 复杂 <eos> 事物 事物 事物 <eos> <eos> <eos> <eos> <eos> 事物 事物 事物 事物 事物 事物 事物 事物 事物 事物 事物 事物 事物 事物
+		true_str---> <bos> 海洋 是 一个 非常 复杂 的 事物 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And those simple themes are n't really themes about the complex science of what 's going on , but things that we all pretty well know . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 这些 简单 的 话题 确实 不是 有关 那 复杂 的 科学 有 了 怎样 的 发展 ， 而是 一些 我们 都 恰好 知道 的 事情 。 <eos> 而是 而是 而是 有 有 有 有关 而是 而是 而是 而是 而是 而是 而是 而是 而是 而是 而是 而是 发展 而是 而是 而是 而是 而是
+		true_str---> <bos> 这些 简单 的 话题 确实 不是 有关 那 复杂 的 科学 有 了 怎样 的 发展 ， 而是 一些 我们 都 恰好 知道 的 事情 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And I 'm going to start with this one : If momma ai n't happy , ai n't nobody happy . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 接下来 我 就 来说 一个 。 如果 老妈 不 高兴 了 ， 大家 都 别 想 开心 。 <eos> 老妈 老妈 老妈 老妈 老妈 老妈 老妈 老妈 老妈 老妈 老妈 大家 大家 大家 大家 大家 大家 大家 大家 大家 大家 能 能 老妈 老妈 老妈 老妈 。 。 。 。 。 老妈
+		true_str---> <bos> 接下来 我 就 来说 一个 。 如果 老妈 不 高兴 了 ， 大家 都 别 想 开心 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And it can be a very complicated thing , what human health is . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 人类 的 健康 也 是 一 件 非常 复杂 的 事情 。 <eos> 而是 复杂 复杂 复杂 而是 <eos> <eos> <eos> <eos> <eos> <eos> <eos> 事情 事情 复杂 复杂 复杂 复杂 复杂 人类 复杂 复杂 复杂 复杂 复杂 <eos> <eos> 人类 人类 <eos> <eos> <eos> 向前 向前 。 。 。 人类 人类
+		true_str---> <bos> 人类 的 健康 也 是 一 件 非常 复杂 的 事情 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And bringing those two together might seem a very daunting task , but what I 'm going to try to say is that even in that complexity , there 's some simple themes that I think , if we understand , we can really move forward . <eos>
+		pred_str ---> <bos> 将 两者 统一起 来看 起来 是 一 件 艰巨 的 任务 。 但 我 想 要 试图 去 说明 的 是 即使 是 如此 复杂 的 情况 ， 也 存在 一些 我 认为 简单 的 话题 ， 一些 如果 我们 能 理解 ， 就 很 容易 向前 发展 的 话题 。 <eos>
+		true_str---> <bos> 将 两者 统一起 来看 起来 是 一 件 艰巨 的 任务 。 但 我 想 要 试图 去 说明 的 是 即使 是 如此 复杂 的 情况 ， 也 存在 一些 我 认为 简单 的 话题 ， 一些 如果 我们 能 理解 ， 就 很 容易 向前 发展 的 话题 。 <eos>
+
