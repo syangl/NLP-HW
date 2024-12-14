@@ -23,7 +23,7 @@ if not os.path.exists('fig'):
 if not os.path.exists('model'):
     os.mkdir('model')
 
-TRAIN_FLAG = False
+TRAIN_FLAG = True
 
 # 设置随机种子以确保结果可重复
 SEED = 20241212
@@ -419,7 +419,8 @@ NUM_LAYERS = 3
 FORWARD_EXPANSION = 4
 HEADS = 8
 DROPOUT = 0.10
-MAX_LENGTH = 100
+# 统计训练数据最大长度
+MAX_LENGTH = max(max([ len(x) for x, _ in train_loader]), max([ len(y) for _, y in train_loader])) + 1
 
 model = Transformer(
     src_vocab_size=len(SRC_VOCAB),
@@ -533,9 +534,9 @@ if TRAIN_FLAG == True:
 
         epoch_mins, epoch_secs = epoch_time(start_time, end_time)
 
-        # if valid_loss < best_valid_loss:
-        #     best_valid_loss = valid_loss
-        #     torch.save(model.state_dict(), 'model/transformer.pth')
+        if valid_loss < best_valid_loss:
+            best_valid_loss = valid_loss
+            torch.save(model.state_dict(), 'model/transformer.pth')
 
         if (epoch+1) % STRIP == 0:
             print(f'\r\tEpoch: {epoch + 1:02} | Time: {epoch_mins}m {epoch_secs}s', end='')
