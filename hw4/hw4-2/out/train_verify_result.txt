@@ -1,0 +1,6 @@
+Test Loss: 0.003 | Test Macro F1: 100.00%
+8001	 Pred: Instrument-Agency(e2,e1) True: Instrument-Agency(e2,e1)
+8002	 Pred: Other True: Other
+8003	 Pred: Component-Whole(e2,e1) True: Component-Whole(e2,e1)
+8004	 Pred: Other True: Other
+8005	 Pred: Member-Collection(e1,e2) True: Member-Collection(e1,e2)
