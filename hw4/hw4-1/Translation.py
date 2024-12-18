@@ -67,16 +67,16 @@ def load_data(data_path):
     test_src = (line.strip() for line in open(Path(data_path) / 'test.en', encoding='utf-8'))
     test_trg = (line.strip() for line in open(Path(data_path) / 'test.zh', encoding='utf-8'))
 
-    return ( # For debug
-        {'src': list(train_src)[:5], 'trg': list(train_trg)[:5]},
-        {'src': list(valid_src)[:5], 'trg': list(valid_trg)[:5]},
-        {'src': list(test_src)[:5], 'trg': list(test_trg)[:5]}
-    )
-    # return (
-    #     {'src': list(train_src)[:15000], 'trg': list(train_trg)[:15000]},
-    #     {'src': list(valid_src)[:15000], 'trg': list(valid_trg)[:15000]},
-    #     {'src': list(test_src)[:15000], 'trg': list(test_trg)[:15000]}
+    # return ( # For debug
+    #     {'src': list(train_src)[:5], 'trg': list(train_trg)[:5]},
+    #     {'src': list(valid_src)[:5], 'trg': list(valid_trg)[:5]},
+    #     {'src': list(test_src)[:5], 'trg': list(test_trg)[:5]}
     # )
+    return (
+        {'src': list(train_src)[:15000], 'trg': list(train_trg)[:15000]},
+        {'src': list(valid_src)[:15000], 'trg': list(valid_trg)[:15000]},
+        {'src': list(test_src)[:15000], 'trg': list(test_trg)[:15000]}
+    )
 
 
 train_data, valid_data, test_data = load_data(data_path='data/en-zh/')
@@ -135,7 +135,7 @@ train_dataset = TranslationDataset(train_data['src'], train_data['trg'], SRC_VOC
 valid_dataset = TranslationDataset(valid_data['src'], valid_data['trg'], SRC_VOCAB, TRG_VOCAB)
 test_dataset = TranslationDataset(test_data['src'], test_data['trg'], SRC_VOCAB, TRG_VOCAB)
 
-BATCH_SIZE = 64
+BATCH_SIZE = 32
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, collate_fn=collate_batch)
@@ -515,7 +515,7 @@ def plot_loss(train_lossv, train_pplv, valid_lossv, valid_pplv, path):
 if TRAIN_FLAG == True:
     print("Training...")
     # Train
-    N_EPOCHS = 500
+    N_EPOCHS = 1000
     STRIP = 10
     CLIP = 1  # 梯度裁剪，防止梯度爆炸
 
@@ -524,7 +524,7 @@ if TRAIN_FLAG == True:
     train_pplv = []
     valid_lossv = []
     valid_pplv = []
-    for epoch in range(N_EPOCHS):
+    for epoch in tqdm(range(N_EPOCHS)):
 
         start_time = time.time()
 
@@ -568,5 +568,5 @@ with open("out/test_result.txt", "w", encoding="utf-8") as f:
             src_str = " ".join([SRC_VOCAB.get_itos()[x] for x in src[i].tolist()])
             pred_str = " ".join([TRG_VOCAB.get_itos()[x] for x in pred_trg[i].tolist()])
             trg_str = " ".join([TRG_VOCAB.get_itos()[x] for x in trg[i].tolist()])
-            f.write(f"src_str ---> {src_str}\n\t\tpred_str ---> {pred_str}\n\t\ttrue_str---> {trg_str}\n\n")
+            f.write(f"src_str ---> {src_str}\n\t\tpred_str ---> {pred_str}\n\t\ttrue_str ---> {trg_str}\n\n")
 print("Testing finished!")

@@ -1,0 +1,2 @@
+dropout层添加和删除，结果明显不一样，在过拟合中非常重要
+trainloss很小，testloss很高，是典型的过拟合，不是epoch越多越好
