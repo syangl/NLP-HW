@@ -1,0 +1,402 @@
+Test Loss: 4.407 | Test PPL:  82.036
+
+src_str ---> <bos> This is a shot of Cannery Row in 1932 . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 这是 联系 在 " 里 " 地方 的 一 我们 照片 <eos> 的 的 的 人们 人们 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 这是 1932年 在 <unk> 里 <unk> 拍 的 一 副 照片 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> The pyramid of ocean life ... <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 海洋 生物 的 食物链 …… <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 通过 通过 通过 通过 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 海洋 生物 的 食物链 …… <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Now , to bring that home , I thought I 'd invent a little game . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 然后 ， 体内 能 含毒 了解 这个 问题 ， 我 想 得到 大家 做 个 小 游戏 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 然后 ， 为了 能 彻底 了解 这个 问题 ， 我 想 邀请 大家 做 个 小 游戏 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Well , some of us would be eating those chocolates instead of passing them around , and instead of accumulating , they will just pass into our group here and not accumulate in any one group because they 're absorbed by us . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 嗯 ， 我们 之中 的 一些 人 会 把 巧克力 吃 了 而 不 给 别人 。 这样 就 不 会 产生 堆积 ， 它们 只 会 在 钱 中 流通 但 不 会 堆积 在 想 里 。 因为 巧克力 可以 被 我们 吸收 。 <eos> 的 的 的 的
+		true_str ---> <bos> 嗯 ， 我们 之中 的 一些 人 会 把 巧克力 吃 了 而 不 给 别人 。 这样 就 不 会 产生 堆积 ， 它们 只 会 在 人群 中 流通 但 不 会 堆积 在 人群 里 。 因为 巧克力 可以 被 我们 吸收 。 <eos> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Here 's a diagram of the PCB load of dolphins in Sarasota Bay . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 这是 一 张 萨拉索 塔湾 海豚 体内 PCB 含量 的 危害 。 <eos> 张 张 张 张 张 张 张 张 张 张 张 张 张 张 一部分 一部分 张 张 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 这是 一 张 萨拉索 塔湾 海豚 体内 PCB 含量 的 图表 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> That top predator , of course , is us . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> <bos> ， 这个 顶端 捕食者 就是 我们 。 <eos> 的 的 的 的 的 的 的 的 的 的 藻类 藻类 藻类 藻类 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 显然 ， 这个 顶端 捕食者 就是 我们 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And those dolphin parts had a huge load of PCBs , <unk> and heavy metals . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 那些 海豚 肉 都 吃 都 的 PCB分子 ， 但 （ 帮助 ） 和 多 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 那些 海豚 肉 都 含 巨量 的 PCB分子 ， 二恶英 （ 剧毒 ） 和 重金属 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> That led to a whole series of other campaigns in Japan , and I 'm really proud to say that at this point , it 's very difficult to buy anything in Japan that 's labeled incorrectly , even though they 're still selling whale meat , which I believe they should n't . <eos>
+		pred_str ---> <bos> 这 导致 了 日本 世界 的 其他 鲸 。 在 这 一点 上 ， 我 真的 非常 个 的 说 ， 在 日本 买 任何 东西 都 很 传染源 这是 事 即使 了 ， 即使 他们 堆积 在 有毒 更 ， 而 我 认为 他们 不 该 这么 做 。 <eos>
+		true_str ---> <bos> 这 导致 了 日本 一系列 的 其他 运动 。 在 这 一点 上 ， 我 真的 非常 骄傲 的 说 ， 在 日本 买 任何 东西 都 很 难 这是 标签 <unk> 了 ， 即使 他们 仍然 在 出售 <unk> ， 而 我 认为 他们 不 该 这么 做 。 <eos>
+
+src_str ---> <bos> Now how many of you have ever gone to a state park or a national park where you had a big sign at the front saying , " Closed because human sewage is so far over this park that you ca n't use it " ? <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 那么 有 多少 人 实际上 去 过 鲸鱼 公园 肉 国家 公园 呢 ？ 在 那 的 中 实际上 看到 伟大 大 标志 上 这样 写 " 吗 ？ " …… 垃圾 太 多 理解 公园 而 关闭 " <eos> 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 那么 有 多少 人 曾经 去 过 州立 公园 或是 国家 公园 呢 ？ 在 那 的 门口 曾经 看到 一块 大 标志 上 这样 写 着 吗 ？ " 因 垃圾 太 多 充斥 公园 而 关闭 " <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> That means that the beach might have great waves , but it 's a dangerous place for surfers to be because they can carry with them , even after a great day of surfing , this legacy of an infection that might take a very long time to solve . <eos> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 这 现在 这里 可能 有 食物链 ， 但 这 对 冲浪者 来说 是 能 的 因为 他们 会 一直 携带 海洋 中 的 细菌 ， 即使 是 在 冲浪 之后 的 很多 天 ， 这些 因为 造成 的 感染 富集 要 并不 很 能 细菌 去 治疗 。 <eos> 的 的
+		true_str ---> <bos> 这 表示 海边 可能 有 大浪 ， 但 这 对 冲浪者 来说 是 危险 的 因为 他们 会 一直 携带 海洋 中 的 细菌 ， 即使 是 在 冲浪 之后 的 很多 天 ， 这些 遗留物 造成 的 感染 也许 要 花 很 长 时间 去 治疗 。 <eos> <pad> <pad>
+
+src_str ---> <bos> So what do you do ? <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我们 该 做 了 什么 呢 ？ <eos> 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 那么 的 的 的 的 的 的 的 的 的 倍 倍
+		true_str ---> <bos> 我们 该 做 点 什么 呢 ？ <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> In 2009 , the picture is dramatically different . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 体内 的 照片 中 已经 有 大 不同 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 2009年 的 照片 中 已经 有 明显 不同 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Other people , like David Packard and Julie Packard , who were instrumental in producing the Monterey Bay aquarium to lock into people 's notion that the ocean and the health of the ocean ecosystem were just as important to the economy of this area as eating the ecosystem would be . <eos> <pad> <pad>
+		pred_str ---> <bos> 的 像 我 和 用 ， 他们 帮助 美国 了 事 和 会 气味 让 人们 了解 这 张 海洋 和 海洋 生态 系统 的 健康 和 想 的 用 发展 一样 保丽龙 但 用 发展 却 说 了 海洋 生态 。 <eos> 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 其他人 像 <unk> 和 <unk> ， 他们 帮助 <unk> 了 蒙特 雷湾 水族馆 以此 让 人们 了解 这 片 海洋 和 海洋 生态 系统 的 健康 和 当地 的 经济 发展 一样 重要 但 经济 发展 却 侵害 了 海洋 生态 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> <unk> . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> <bos> <eos> 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 的 的 的 的 的 的 的
+		true_str ---> <bos> 哈哈 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> BJ : From an actor . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我们 到 ： 和 <bos> 的 巨大 ， <eos> 的 的 的 的 的 的 人们 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 一部分 一部分 一部分 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 贝索 琼斯 ： 和 演员 的 基本 原则 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> AK : It has ears that move passively when the head goes . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 可以 多 ： 当 它 的 <bos> 的 时候 她们 能 <bos> 一 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 艾德里安 科勒 ： 当 它 的 头转 的 时候 耳朵 能 跟着 移动 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> BJ : So Tom gave us a call and said , " Do you think you could make us a horse for a show to happen at the National Theatre ? " <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 肉 越来越 ： 这样 个 就 给 我们 毒素 了 个 个 说 " 你 觉得 你 能 不 能 给 我们 给 需要 在 国家 它们 " 用 ？ " <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 贝索 琼斯 ： 这样 汤姆 就 给 我们 打 了 个 电话 说 " 你 觉得 你 能 不 能 给 我们 作 匹马 在 国家 剧院 <unk> 用 ？ " <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> So we made a model . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 现在 我们 做 了 个 用 <eos> 藻类 藻类 藻类 鳍 鳍 藻类 藻类 藻类 通过 通过 通过 藻类 藻类 藻类 藻类 通过 通过 通过 通过 藻类 藻类 藻类 藻类 通过 通过 的 藻类 藻类 藻类 藻类 通过 通过 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 所以 我们 做 了 个 模型 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> BJ : So we got a camera , and we posed the puppet in various galloping <unk> . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我们 都 ： 我们 都 了 公园 把 都 可以 出 这样 的 可以 （ 可以 可以 ） <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 贝索 琼斯 ： 我们 拿 了 <unk> 把 木偶 <unk> 出 奔腾 的 <unk> （ <unk> <unk> ） <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And Nick Starr , the director of the National Theatre , saw that particular moment , he was standing next to me -- he nearly wet himself . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> <bos> 可以 ， 国家 是 的 食物 看到 了 这个 ： - 游戏 像 闻到 我 发现 - " 太 悲剧 了 例子 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 尼克 <unk> ， 国家 剧院 的 导演 看到 了 这个 片段 - 他 当时 站在 我 身边 - 他 差点 尿 了 裤子 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> So here are some half - finished horses ready to be worked in London . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 这里 是 一些 体内 含毒 说 还有 <eos> 一部分 一部分 一部分 一部分 一部分 一部分 一部分 一部分 一部分 一部分 一部分 一部分 通过 通过 通过 通过 通过 一部分 一部分 一部分 一部分 一部分 一部分 通过 的 的 那么 那么 那么 通过 通过 的 一部分 一部分 的 的 的 的 的 的 的 一部分 一部分
+		true_str ---> <bos> 这里 是 一些 半成品 正在 伦敦 加工 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Come here . Stand here where people can see you . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 来 这里 ， 鲸 在 这里 ， 大家 都 能 皮肤 你 <eos> 人们 人们 人们 人们 人们 人们 鳍 藻类 藻类 藻类 通过 的 的 一部分 一部分 一部分 一部分 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 来 这里 ， 站 在 这里 ， 大家 都 能 看见 你 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Horses ' hearing is very important . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 动物 的 因为 十分 " 保丽龙 的 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 通过 通过 通过 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 马 的 听觉 十分 常 重要 的 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> AK : You want to say something about the breathing ? <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 可以 " ： 你 想 看到 关于 人们 的 被 闻到 ？ <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 艾德里安 科勒 ： 你 想 说说 关于 呼吸 的 部分 么 ？ <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> It 's three heads making one character . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 这 说 可以 别 <eos> 藻类 藻类 藻类 藻类 的 的 的 的 的 张 张 张 张 藻类 藻类 藻类 藻类 藻类 通过 通过 藻类 藻类 藻类 藻类 的 的 的 的 的 的 藻类 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 这 三个臭皮匠 <unk> 啊 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Thank you . Thank you . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 含毒 ， 含毒 大家 <eos> 藻类 藻类 一部分 一部分 鳍 鳍 鳍 一部分 一部分 一部分 一部分 一部分 一部分 一部分 通过 通过 通过 通过 通过 通过 通过 一部分 一部分 一部分 一部分 通过 通过 的 除了 除了 除了 除了 通过 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 谢谢 ， 谢谢 大家 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> You can see this most clearly when you take away someone 's watch and you shut them into a bunker , deep underground , for a couple of months . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 当 你 <bos> 越来越 动物 的 （ ， 把 游戏 呢 一个 ω 。 的 含毒 给 人类 几 个 保丽龙 ， 你 就 能 更 人 越来越 <eos> 到 污染物 的 母亲 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 当 你 拿走 某 个人 的 手表 ， 把 他 关进 一个 深入 地下 的 地下 堡垒 关上 几 个 月 ， 你 就 能 更 清楚 地 观察 到 生物钟 的 作用 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> In winter , there 's a lot of sleeping going on ; you enjoy your family life inside . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 在 过 ， 进入 并且 很 但是 。 人们 在 " 实际上 后代 生活 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 在 冬天 ， 睡眠 时间 很 长 。 人们 在 室内 享受 家庭 生活 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> So , cut to the modern day . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 那么 ， 海豚 ， 保丽 。 <eos> 的 的 的 的 的 的 的 人们 人们 人们 人们 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 那么 ， 转到 现代 社会 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> When they passed Go , they collected twice the salary , and they got to roll both dice instead of one , so they got to move around the board a lot more . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 当 他们 这就 我 的 时候 他们 让 两 倍 的 这 因为 他们 可以 同时 <bos> 两 个 <bos> 而 不是 一个 的 他们 可以 在 人类 上 一 更 多 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 当 他们 途径 起点 的 时候 他们 拿到 两 倍 的 工资 而且 他们 可以 同时 掷 两 个 骰子 而 不是 一个 所以 他们 可以 在 棋盘 上 移动 更 多 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Paul <unk> : Okay , so it was quickly apparent to players that something was up . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 是 - 这就 ： 的 ， 实际上 有害 就 的 到 这个 游戏 —— 人类 就 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 保罗 - 皮夫 ： 所以 ， 玩家们 很快 就 意识 到 这个 游戏 明显 有点 奇怪 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> PP : Okay , so no surprises , people are onto us . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> PCB ： 好 吧 ， 可以 ， 大家 觉得 有 问题 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 保罗·皮夫 ： 好 吧 ， <unk> ， 大家 觉得 有 问题 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And what my colleagues and I for the last seven years have been doing is studying the effects of these kinds of hierarchies . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我 和 我 的 生长 在 过去 的 复杂 年 里 一直 在 做 的 就是 它们 这些 不同 正常人 的 影响 <eos> 通过 通过 的 一部分 一部分 一部分 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 我 和 我 的 同事 在 过去 的 7 年 里 一直 在 做 的 就是 研究 这些 不同 层次 的 影响 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Individuals who made 25,000 sometimes under 15,000 dollars a year , gave 44 percent more of their money to the stranger than did individuals making 150,000 or 200,000 dollars a year . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 那些 的 这是 来自 这是 网站 对于 就 的 人 和 那些 的 这是 要 这是 我 的 人 并不 起来 多 给 了 有趣 多 给 了 有趣 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 那些 年收入 为 25000 甚至 低于 15000 美元 的 人 和 那些 年收入 为 15万 甚至 20万 的 人 比 起来 多 给 了 44% 多 给 了 44% <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> We 've even studied cars , not just any cars , but whether drivers of different kinds of cars are more or less inclined to break the law . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我们 还 它们 了 鱼 是 是 港口 而是 不同 想 能 的 花生 金字塔 更 成为 做 一些 到达 的 事情 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 我们 还 研究 了 汽车 不只 是 汽车 而是 不同 类型 汽车 的 司机 谁 更 倾向于 做 一些 违法 的 事情 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> None of the cars , none of the cars in our least expensive car category broke the law . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 而 在 我们 的 大 ？ 里 没有 一 。 这些 做出 到达 ， <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 而 在 我们 的 廉价 车系 里 没有 一 辆 车 做出 违法 行为 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> But over the last 20 years , that significant difference has become a grand canyon of sorts between those at the top and everyone else . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 但是 在 过去 的 复杂 里面 这种 巨大 第一 细菌 成为 了 一些 钱 与 其他 人类 之间 的 <eos> <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 但是 在 过去 的 20年 里面 这种 巨大 差异 最终 成为 了 顶层 人群 与 其他 所有人 之间 的 鸿沟 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Again , these are outcomes not just experienced by a few , but that <unk> across all strata of society . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 而 这些 要 不是 了 人 所 经历 的 而是 会 影响 使得 的 各个 东西 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 而 这些 后果 不是 少数 人 所 经历 的 而是 会 影响 社会 的 各个 阶层 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And there 's the Giving Pledge , in which more than 100 of our nation 's wealthiest individuals are <unk> half of their fortunes to charity . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 还有 它们 因为 我们 国家 —— 个 最 乳汁 的 人 化学 因为 将 他们 不 的 " 海豚 给 那样 金字塔 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 还有 捐赠 承诺 我们 国家 100多 个 最 富有 的 人 正在 承诺 将 他们 一半 的 财产 捐赠 给 慈善 事业 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> But by the end of the 20th century , a new generation of critics and reformers had come to see philanthropy just this way . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 到 了 两者 的 工作 东西 的 食物链 说 抗生素 就是 人类 这样 的 方式 来 看待 那样 的 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 到 了 20世纪 的 末期 新一代 的 批评家 以及 改革家 就是 以 这样 的 方式 来 看待 慈善 的 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> The book is called " <unk> <unk> . " <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 那 几 的 一些 是 运转 看 健康 的 我们 人类 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 那 本书 的 书名 是 《 看 不见 的 力量 》 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Take a look , if you have n't , at DonorsChoose . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 和 你 还 不 知道 ， 请 然后 " " 这个 网站 吧 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 假如 你 还 不 知道 ， 请 看看 <unk> <unk> 这个 网站 吧 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> One of the best known is Acumen Fund , led by Jacqueline Novogratz , a TEDster who got a big boost here at TED . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 其中 一个 很 ： 例子 就是 的 你 , 它 是 由 和 " 也 。 的 每 也 。 在 你 的 海岸 上 你 这样 的 经历 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 其中 一个 很 好的 例子 就是 Acumen Fund , 它 是 由 Jacqueline <unk> z 主管 的 她 也 多次 在 TED 的 舞台 上 谈及 这样 的 经历 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> This tackles yet another assumption , that the giver and the organization is at the center , as opposed to putting the problem at the center . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 这就 打破 了 另外 一个 假设 含有 那样 很 是 是 什么 上 的 实际上 问题 也 可以 成为 那样 的 上 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 这就 打破 了 另外 一个 假设 即 慈善 必须 是 以 人为 中心 的 实际上 问题 也 可以 成为 慈善 的 中心 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> We have got to realize that it is going to take a long time to do these things . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我们 需要 一个 这 的 了 来 做 这些 事情 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 我们 需要 一个 长期 的 过程 来 做 这些 事情 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Many of you will realize that I 'm ripping a bit off of the science fiction writer <unk> <unk> 's notion of a technological singularity , where a number of trends accelerate and converge and come together to create , really , a shockingly new reality . <eos> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> <bos> 已经 人 已经 在 了 ， 就是 我 在 ， —— 能 的话 时候 金字塔 在 这个 使 鱼肉 就是 由 —— 能 机制 " " 日本 传染源 的 当 世界 的 " 在 只有 并且 就 的 时候 将 会 的 出 一个 让 人 的 的 ） 的 向前 <eos>
+		true_str ---> <bos> 也许 有些 人 已经 听懂 了 ， 就是 我 在 借用 科幻 小说 的话 语 技术 奇点 这个 说法 最初 就是 由 科幻 小说 作家 <unk> <unk> 提 出来 的 当 一系列 的 趋势 在 加速 并且 汇聚 的 时候 将 会 创造 出 一个 让 人 惊讶 的 全新 的 未来 <eos>
+
+src_str ---> <bos> We are going to need a new generation of citizen leaders willing to commit ourselves to growing and changing and learning as rapidly as possible . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我们 需要 的 是 东西 的 来自于 一 他们 感染 时候 、 鱼肉 说 进入 这 并且 那样 底部 之外 的 链里 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 我们 需要 的 是 新一代 的 公民 领袖 他们 <unk> 成长 、 变化 以及 热爱 学习 并且 能够 跟随 变化 的 步伐 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Whatever that means to you . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 这就 那 对于 你 的 和 是 什么 <eos> 鳍 鳍 鳍 人们 有害 人们 人们 人们 人们 人们 藻类 藻类 藻类 藻类 内 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 不管 那 对于 你 的 意义 是 什么 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> My own research on cellphones and voice calls shows that 80 percent of the calls are actually made to four people . 80 percent . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 而 由 我 做 的 关于 对 和 来说 复杂 它们 中 之前 其他 的 成为 实际上 是 和 会 世界 去 。 繁殖 。 <eos> 一部分 一部分 一部分 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 而 由 我 做 的 关于 手机 和 语音 呼叫 研究 中 表明 百分之八十 的 来电 实际上 是 和 4 个人 对话 。 百分之八十 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> He just wants to wish her a good day , because that 's the start of her day . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 因为 这是 从 人类 的 一 天 ， 部长 只是 想 富集 。 有 把 的 一 天 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 因为 这是 她 新 的 一 天 ， 他 只是 想 祝福 她 有 美好 的 一 天 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> But Danny Miller , who is a very good anthropologist who is working on Filipina migrant women who leave their children back in the Philippines , was telling me about how much parenting is going on through Skype , and how much these mothers are engaged with their children through Skype . <eos>
+		pred_str ---> <bos> 用 办公桌 是 一 位 很 高兴 美国 ， 部长 它们 上 体内 妇女 ， 这些 妇女 张 她们 在 —— 的 孩子们 ， 部长 。 这里 我 有 ， 金字塔 " 是 通过 并 来 —— 的 ， 还有 很多 这些 —— 母亲们 通过 的 来 了解 她们 的 孩子们 。 <eos>
+		true_str ---> <bos> <unk> Miller 是 一 位 很 好的 人类学家 ， 他 研究 菲律宾籍 移民 妇女 ， 这些 妇女 离开 她们 在 菲律宾 的 孩子们 ， 他 曾 告诉 我 有 父母 教育 子女 是 通过 Skype 来 交流 的 ， 还有 很多 这些 菲律宾 母亲们 通过 Skype 来 了解 她们 的 孩子们 。 <eos>
+
+src_str ---> <bos> So , think of the three settings I 've talked to you about : factory , migration , office . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 那么 下面 这 。 个 我 所 做 的 肉 ： 工厂 ， 体内 ， 会 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 那么 想想 这 3 个 我 所 谈到 的 背景 ： 工厂 ， 移民 ， 办公室 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> The phones were there . But the expectation was once you moved in there your commitment was fully to the task at hand , fully to the people around you . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> <bos> 就 在 那里 。 但是 ， 并 你 进入 到 工作 最 ， 所 修理 的 是 ， 你 的 。 就是 还有 越来越 。 特别 的 任务 ， 用 现在 " 你 发现 的 人们 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 手机 就 在 那里 。 但是 ， 一旦 你 进入 到 工作 领域 ， 所 期望 的 是 ， 你 的 义务 就是 全身心 地 完成 手头 的 任务 ， 全身心 服务 于 你 身边 的 人们 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And when with modern bureaucracy there was a very rational approach , where there was a clear distinction between the private sphere and the public sphere . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 可以 是 浮游 ， 就 有 一个 非常 被 的 方法 ， 那里 有 一个 能 最 和 但 最 之间 的 这些 像 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 随着 当代 官僚 ， 就 有 一个 非常 合理 的 方法 ， 那里 有 一个 私人 领域 和 公共 领域 之间 的 明确 区分 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And they are doing it massively . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 然而 他们 PCB 越来越 联系 。 <eos> 藻类 藻类 的 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 然而 他们 大规模 地 联系 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Immediate <unk> to bus drivers in New York , if seen with a mobile phone in a hand . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 如果 在 的 除了 母亲们 花生 被 看到 感染 一 联系 ， 游戏 就 被 保丽龙 鲸鱼 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 如果 纽约 的 公共 汽车 司机 被 看到 <unk> 移动 电话 ， 他 就 被 立即 解雇 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> There 's another reason as well . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 同时 还有 另 一个 原因 <eos> 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 同时 还有 另 一个 原因 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> It can get sideways like a rally car driver , always able to take the <unk> curve , even on slippery , changing surfaces , never spinning out . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 它 能 像 一个 能 公园 保丽龙 一样 从 到 过 也 从 能 海洋 过 可以 即使 在 。 ， 不断 的 的 一 也 努力 不 会 理解 被 他们 ， <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 它 能 像 一个 汽车 <unk> 选手 一样 从 路边 过 也 从 能 转 过 <unk> 即使 在 湿滑 ， 不断 变化 的 路面 也 从来 不 会 打滑 被 甩 出去 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Not only that , they 're able to do it lap after lap after lap . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 怎么 如此 ， 他们 能 如此 越来越 可以 一 细菌 一 海岸 花生 一 细菌 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 不但 如此 ， 他们 能 如此 地 开 一 圈 一 圈 又 一 圈 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> She 's putting electrodes on his head so that we can monitor the electrical activity in John 's brain as he races around the track . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 用 把 不同 放在 上 的 了 这样 ， 我们 可以 上 " " 上 那样 致癌 时候 游戏 还 不同 的 进入 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 她 把 电极片 放在 他 的 头上 这样 ， 我们 可以 监测 <unk> <unk> 着 轨道 飚车 时候 他 大脑 电波 的 活动 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Now , the Corkscrew is a <unk> , followed by a quick right - handed turn as the road drops three stories . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 现在 ， 这个 可以 是 一个 食物链 用 接下来 是 一个 很 除了 的 最 生态 场 但 地方 " 。 食物链 可以 那么 的 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 现在 ， 这个 <unk> 是 一个 S <unk> 接下来 是 一个 很 急 的 右 转弯 与此同时 路面 好像 <unk> 3 层 楼 那么 高 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> But what 's really interesting is to look at areas of the track where his mental workload does n't increase . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 但是 到 有趣 的 事 是 看 不 会 使 游戏 对 这些 保丽龙 的 一些 罐头 的 如果 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 但是 真正 有趣 的 事 是 看 不 会 使 他 脑力 负荷 增加 的 一些 赛道 的 区域 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> They are things that they have simply learned to do . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 这些 事 对 他们 来说 公园 公园 了 <eos> 来说 来说 有害 有害 有害 有害 有害 有害 来说 来说 藻类 藻类 藻类 有害 有害 来说 来说 来说 来说 藻类 的 的 的 的 的 来说 来说 来说 来说 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 这些 事 对 他们 来说 <unk> <unk> 了 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Do we want our car to perhaps be a partner , a coach , someone that can use their understanding of the situation to help us reach our potential ? <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我们 想 让 我们 的 天 我们 的 食物链 ， 中 或者是 能 了解 到 ， 会 的 从 人 这样 帮助 我们 母亲们 我们 的 。 吗 ？ <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 我们 想 让 我们 的 车成 我们 的 伙伴 ， 教练 或者是 能 了解 到 周围 环境 的 那个 人 从而 帮助 我们 发挥 我们 的 潜力 吗 ？ <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Talk about a sweet beginning . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 这 花生 一个 这 的 开始 。 <eos> 的 的 的 的 的 的 的 人们 人们 通过 通过 藻类 藻类 藻类 通过 通过 通过 的 的 一部分 一部分 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 一部分 一部分 一部分 通过 通过 的 的 的 的 的
+		true_str ---> <bos> 这 真是 一个 美好 的 开始 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> So a few years ago , L.A. County decided that they needed to spend 2.5 billion dollars to repair the city schools . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 就 在 几 年前 ， 可以 一 。 不 就 ： 食物链 污染物 的 致癌 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 就 在 几 年前 ， 洛杉矶 决定 投入 二十五亿 美元 整修 全 市 的 学校 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> It can make a mountain go from this to this in a few short months . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 它 能 使 一 鲸 海洋 在 这个 想 保丽龙 里 从 这样 " 那样 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 一部分 一部分 一部分 的 的 的 的 的 的 的
+		true_str ---> <bos> 它 能 使 一 座 山 在 短短 数 月 里 从 这样 变成 那样 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> The water is turned into goo . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 本 这里 的 水 <bos> 了 " 。 <eos> 的 的 的 的 的 的 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 的 的 通过 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 通过 通过 通过 通过 通过 的 的 的 的 的
+		true_str ---> <bos> 原本 洁净 的 水 变成 了 <unk> 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And it has since moved to her bones and her brain . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 只是 已经 的 到 了 一点 的 。 和 大家 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 而且 已经 蔓延 到 了 她 的 骨头 和 大脑 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Now they 're all very practical visionaries . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 他们 都 是 有 因为 的 " 。 <eos> 污水 鳍 藻类 有害 有害 有害 有害 有害 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 的 的 的 的 藻类 藻类 藻类 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 倍 倍 倍 倍 倍 倍 的 的 的 的 的
+		true_str ---> <bos> 他们 都 是 有 远见 的 <unk> 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Even when we think or talk about recycling , lots of recyclable stuff ends up getting incinerated or in landfills and leaving many municipalities , diversion rates -- they leave much to be recycled . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 当 我们 即使 在 而是 如何 有毒 鲸鱼 时 ， 许多 <bos> 污染物 的 已经 被 成为 会 成为 了 ， 这 链里 了 联系 的 污染物 很 到 ， 使 污染物 顶端 更 复杂 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 当 我们 思考 或 讨论 如何 回收 利用 时 ， 许多 可 回收 物品 已经 被 焚化 或 掩埋 了 ， 这 加大 了 城市 的 回收 分流 难度 ， 使 回收 过程 更 复杂 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> <unk> agricultural operations often are responsible for poisoning our waterways and our land , and it produces this incredibly unhealthy product that costs us billions in healthcare and lost productivity . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 可以 堆积 多 小 污染 了 对于 用 次 ， 还 都 出 对 这个 健康 危害 会 的 的 世界 让 我们 在 应该 卫生 不同 个 了 大 把 金钱 ， 并 贝毒 了 东西 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 大规模 农业 操作 不仅 污染 了 水源 以及 土壤 ， 还 生产 出 对 人体 健康 危害 极 高 的 产品 让 我们 在 医疗 卫生 方面 损失 了 大 把 金钱 ， 并 降低 了 生产力 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And I call it " hometown security . " <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我 把 它 成为 " 多 这些 " 。 <eos> 的 的 的 的 有害 有害 一部分 一部分 一部分 的 的 的 的 的 的 的 一部分 一部分 一部分 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 一部分 一部分 一部分 的 的 的 的 的 的 的
+		true_str ---> <bos> 我 把 它 成为 " 国土 安全 " 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> The challenge for us now is to identify and support countless more . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我们 <eos> 所 海洋 的 问题 是 如何 美国 并 说明 更 多 的 好 <eos> 。 <eos> 一部分 的 的 的 的 的 的 的 一部分 一部分 一部分 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 一部分 一部分 一部分 的 的 的 的 的 的 的
+		true_str ---> <bos> 我们 目前 所 面临 的 问题 是 如何 找到 并 扶持 更 多 的 好 点子 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> So you need to help him out . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 游戏 需要 帮助 。 <eos> 藻类 藻类 人们 藻类 藻类 藻类 藻类 藻类 人们 人们 人们 人们 人们 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 藻类 的 的 的 的 的 的 的 的 的 的 的 的 的 的 一部分 一部分 一部分 通过 通过 通过 通过 通过 通过 的 的
+		true_str ---> <bos> 他 需要 帮助 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And over the past 20 years , we 've spent record amounts of philanthropic dollars on social problems , yet educational outcomes , malnutrition , incarceration , obesity , diabetes , income disparity , they 've all gone up with some exceptions -- in particular , infant mortality among people in poverty -- but it 's a great world that we 're bringing them into as well . <eos>
+		pred_str ---> <bos> 在 过去 的 统一起 里 ， 我们 这是 解决 情况 问题 并不 了 上来 如何 ， 然而 金字塔 的 后代 ， 营养 她们 ， 一 ， 情况 ， 有 ， 这 情况 这些 次 问题 都 在 的 ， 也 有 情况 给 现在 生态 中 向前 死亡率 的 由 - 但是 我们 的 繁殖 是 让 他们 因为 会 的 把 因为 。 <eos>
+		true_str ---> <bos> 在 过去 的 20年 里 ， 我们 为 解决 社会 问题 花 了 不少 善款 ， 然而 教育 的 成果 ， 营养 不良 ， 牢狱 ， 肥胖 ， 糖尿病 ， 工资 分配 不均 等 问题 都 在 加剧 ， 也 有 例外 比如 贫困 人口 中 婴儿 死亡率 有所 下降 - 但是 我们 的 目标 是 让 他们 过上 幸福 的 美好 人生 。 <eos>
+
+src_str ---> <bos> Over here . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 就 在 这里 。 <eos> 人们 人们 人们 人们 人们 人们 人们 人们 人们 人们 人们 人们 人们 人们 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 藻类 藻类 通过 通过 通过 通过 的 的 的 的 的 的 的 的 的 的 的 的 的 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 的 的
+		true_str ---> <bos> 就 在 这里 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> It 's time to stop building the shopping malls , the prisons , the stadiums and other <unk> to all of our collective failures . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 不 再 这是 ？ 吧 ， ， ， 。 ， 和 这种 臭气 危害 钱 了 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 不要 再 为 商业 广场 ， 监狱 ， 体育馆 ， 和 其它 设施 浪费 钱 了 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And I thought that was the best deal in town , so I accepted it immediately . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我 想 ， 那 两 是 我 能 得到 的 进入 成为 ， 并 我 如果 一样 了 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 我 想 ， 那 大概 是 我 能 得到 的 最好 待遇 ， 所以 我 立即 接受 了 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And after doing this for a long time , and the Media Lab passing the baton on , I thought , " Well , maybe it 's time for me to do a project . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 在 做 了 很 科学 一 有 很 之后 ， 第一 在 钱 但 想 后代 因为 ， 我 想 ， 现在 ， 是 我 去 做 一个 。 的 时候 了 ， <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 在 做 了 很 长 一 段 时间 之后 ， 尤其 在 媒体 实验室 顺利 交接 以后 ， 我 想 ， 现在 大概 是 我 去 做 一个 项目 的 时候 了 ， <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And when people tell me , " Who 's going to teach the teachers to teach the kids ? " <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 当 这是 同样 我 ： " " 来 但 这些 可怕 <bos> 但 这些 孩子们 呢 ？ " <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 当 有人 问 我 ： " 谁 来 教 这些 老师 以来 教 这些 孩子们 呢 ？ " <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> The point being , this is going to be very , very intensive on the programming side . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 这里 我 想 说明 的 是 ， 假设 将 会 得到 健康 的 复杂 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 这里 我 想 说明 的 是 ， 编程 将 会 得到 额外 的 重视 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Whether we sell , it does n't make any difference whatsoever . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 演讲 ， 我们 是 不是 在 卖 那样 都 不 会 有 什么 影响 的 ， <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 内 内 的 的 的 的 的 的 的
+		true_str ---> <bos> 毫无疑问 ， 我们 是 不是 在 卖 电脑 都 不 会 有 什么 影响 的 ， <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> It was getting its power in a different way . It 's kind of childlike . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 它 通过 一 种 不同 一些 的 方式 来 一下 。 那 人类 不 。 <eos> 人们 人们 人们 藻类 藻类 藻类 藻类 通过 的 的 的 的 鲸鱼 鲸鱼 鲸鱼 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 一部分 一部分 一部分 的 的 的 的 的 的 的
+		true_str ---> <bos> 它 通过 一 种 不同 寻常 的 方式 来 发电 。 那 有点 孩子气 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> We were using it at lunch today in the sunlight , and the more sunlight the better . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 堆满 一 的 时候 我们 在 会 下 故事 它 ， 因为 会 " ） 这个 好 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 今天 午餐 的 时候 我们 在 日光 下 使用 它 ， 而且 日光 <unk> 效果 越 好 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And I can race through these and save a lot of time because Yves and I obviously did n't compare notes . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我 可以 坐 越来越 都 这些 个 是 一些 细菌 ， 因为 很 人类 现在 和 我 都 没有 去 身体 的 的 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 我 可以 很快 地 讲完 这些 从而 节省 一些 时间 ， 因为 很 明显 维斯 和 我 都 没有 对照 各自 的 笔记 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> They 're not going to be near another laptop , so you have to nail these onto a tree , and sort of , get it . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 他们 不 会 下面 在 另外 一个 继续 说明 ， 的 你 。 把 能 —— 在 件 ， 然后 ， 你 ， 上 来说 ， 富集 这个 情况 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 他们 不 会 总是 在 另外 一个 笔记本 旁边 ， 所以 你 必须 把 设备 钉 在 树上 ， 然后 ， 某种 程度 上 来说 ， 建立 这个 网络 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Again , when you 're a nonprofit , you look at children as a mission , not as a market . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 再 一 次 越来越 ， 当 你 这 事 杯 时 ， 你 把 孩子们 他们 是 一个 " ， 而 不是 一个 市场 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 再 一 次 地 ， 当 你 是非 盈利 组织 时 ， 你 把 孩子们 看成 是 一个 使命 ， 而 不是 一个 市场 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> When it was announced that they were going to do every child in Uruguay , the first 100,000 , boom , went to OLPC . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 当 他们 的 要 <bos> <bos> 的 每 一个 这个 治疗 一 除了 关注 时 ， 有着 ， 世界 让 了 第一 个 东西 话题 那样 的 <eos> 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 当 他们 宣布 要 为 乌拉圭 的 每 一个 孩子 配备 一 台 笔记本 时 ， 砰 ， OLPC 拿到 了 第一 个 十万 台 电脑 的 订单 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And the " Give One , Get One " program is really important because it got a lot of people absolutely interested . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 这个 买 二 确实 一 的 有 很 保丽龙 。 因为 它 我 了 更 多 对 这个 一家 有 什么 的 人们 、 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 这个 买 二 捐 一 的 计划 很 重要 。 因为 它 吸引 了 更 多 对 这个 项目 有 兴趣 的 人们 、 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> I wo n't dwell on the pricing at all . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 如果 是 我 ， 我 不 会 并不 太 多 的 我 在 气味 上 。 <eos> 人们 人们 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 倍 倍 倍 倍 的 的 的 的 的 的
+		true_str ---> <bos> 如果 是 我 ， 我 不 会 花 太 多 的 篇幅 在 价格 上 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> But a million a month in laptop - land is a big number . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 但 在 PCB 的 世界 里 ， 应该 这是 要 除了 但 是 一个 很 大 的 就是 。 <eos> 张 张 张 张 张 一部分 一部分 一部分 一部分 一部分 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 一部分 一部分 一部分 一部分 一部分 的 的 的 的 的 的
+		true_str ---> <bos> 但 在 笔记本 的 世界 里 ， 每个 月 一百万 台 的确 是 一个 很 大 的 数字 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Now at the time that I was reading this , it was the middle of the winter and I definitely did not have room for a lot of dirt in my New York City apartment . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我 工作 这 在 给 的 时候 确实 与 我 那 在 这个 的 污染物 里 自然 没有 说明 进入 知道 的 对于 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 一部分 一部分 一部分 的 的 的 的 的 的 的
+		true_str ---> <bos> 我 读到 这 篇 文章 的 时候 正是 <unk> 我 那 纽约 小小 的 公寓 里 自然 没有 摆放 大片 土壤 的 空间 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Back at the time , a window farm was no more than a technically complex idea that was going to require a lot of testing . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 事 ， 普通人 办公桌 只是 一个 上 上 一 复杂 的 你 需要 很多 会 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 那时候 ， 窗户 农场 只是 一个 技术 上 有点儿 复杂 的 想法 需要 很多 测试 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And we have window farms all over the world . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 世界 各地 都 有 普通人 起来 <eos> 藻类 一部分 一部分 一部分 一部分 一部分 一部分 一部分 一部分 通过 通过 通过 通过 通过 通过 通过 通过 通过 通过 一部分 一部分 一部分 一部分 通过 通过 的 的 藻类 藻类 藻类 通过 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 一部分 一部分 一部分 一部分 一部分 通过 通过 通过 通过 的 的 的
+		true_str ---> <bos> 世界 各地 都 有 窗户 农场 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And we 're able to look out for the needs of newcomers . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我们 也 了 到 可以 的 需要 <eos> 污水 污水 内 内 内 内 内 内 内 一部分 藻类 藻类 藻类 藻类 内 内 内 内 内 一部分 一部分 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 内 内 内 内 的 的 的 的 的 的
+		true_str ---> <bos> 我们 也 考虑 到 <unk> 的 需要 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> Yeah , I think that 's pretty likely -- there 's going to be lots of robots everywhere . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 是 困难 ， 我 觉得 那 非常 可能 —— 现在 已经 有 很多 容忍 在 我们 ， 了 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 是 啊 ， 我 觉得 那 非常 可能 —— 现在 已经 有 很多 机器人 在 我们 周围 了 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> And on the left there is a platform from Evolution Robotics , where you put a PC on , and you program this thing with a <unk> to wander around your house and do various stuff . <eos> <pad>
+		pred_str ---> <bos> 在 不 有 一个 来自于 天气 动物 同样 的 件 ， 这里 你 可以 一 一 除了 那样 ， 然后 故事 ， 链里 了 来 能 ， 让 这个 容忍 在 你 的 有 里 含毒 会 并且 做 很多 事情 。 <eos>
+		true_str ---> <bos> 在 左边 有 一个 来自于 "进化 机器 人" 的 平台 ， 这里 你 可以 放 一 台 电脑 ， 然后 使用 图形 用户 界面 来 编程 ， 让 这个 机器人 在 你 的 房间 里 到处 巡视 并且 做 很多 事情 。 <eos>
+
+src_str ---> <bos> We 're going to give this away I think , Chris said , after the talk . <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+		pred_str ---> <bos> 我们 将 会 把 部长 他们 ， ， 我 觉得 帮助 在 我 演讲 之后 会 这样 说 。 <eos> 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的 的
+		true_str ---> <bos> 我们 将 会 把 他 送 出去 ， 我 觉得 克里斯 在 我 演讲 之后 会 这样 说 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+
+src_str ---> <bos> I do n't know if you see -- so , I put a bunch of Rice Krispies there , I put some pennies , let 's just shoot it at that , see if it cleans up . <eos>
+		pred_str ---> <bos> 我 不 知道 是 个 看到 —— 的 ， 我 在 这里 一 一些 " ， 我 一 一些 我 ， 让 我们 在 了 次 ， 来 然后 它 认为 鲸鱼 就是 可怕 。 <eos> 的 的 的 的 的 的 的
+		true_str ---> <bos> 我 不 知道 你们 是否 看到 —— 所以 ， 我 在 这里 放 一些 <unk> ， 我 放 一些 硬币 ， 让 我们 在 这边 拍摄 ， 来 看看 它 是否 能够 清理 干净 。 <eos> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+

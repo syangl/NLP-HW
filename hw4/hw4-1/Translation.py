@@ -1,4 +1,5 @@
 import os
+import pickle
 
 import torch
 import torch.nn as nn
@@ -67,28 +68,43 @@ def load_data(data_path):
     test_src = (line.strip() for line in open(Path(data_path) / 'test.en', encoding='utf-8'))
     test_trg = (line.strip() for line in open(Path(data_path) / 'test.zh', encoding='utf-8'))
 
-    # return ( # For debug
-    #     {'src': list(train_src)[:5], 'trg': list(train_trg)[:5]},
-    #     {'src': list(valid_src)[:5], 'trg': list(valid_trg)[:5]},
-    #     {'src': list(test_src)[:5], 'trg': list(test_trg)[:5]}
-    # )
-    return (
-        {'src': list(train_src)[:15000], 'trg': list(train_trg)[:15000]},
-        {'src': list(valid_src)[:15000], 'trg': list(valid_trg)[:15000]},
-        {'src': list(test_src)[:15000], 'trg': list(test_trg)[:15000]}
+    return ( # For debug
+        {'src': list(train_src)[:100], 'trg': list(train_trg)[:100]},
+        {'src': list(valid_src)[:100], 'trg': list(valid_trg)[:100]},
+        {'src': list(test_src)[:100], 'trg': list(test_trg)[:100]}
     )
+    # return (
+    #     {'src': list(train_src), 'trg': list(train_trg)},
+    #     {'src': list(valid_src), 'trg': list(valid_trg)},
+    #     {'src': list(test_src), 'trg': list(test_trg)}
+    # )
 
 
 train_data, valid_data, test_data = load_data(data_path='data/en-zh/')
 
-SRC_VOCAB = build_vocab_from_iterator(yield_tokens(train_data['src'], SRC_TOKENIZER),
-                                      specials=["<unk>", "<pad>", "<bos>", "<eos>"])
-TRG_VOCAB = build_vocab_from_iterator(yield_tokens(train_data['trg'], TRG_TOKENIZER),
-                                      specials=["<unk>", "<pad>", "<bos>", "<eos>"])
-SRC_VOCAB.set_default_index(SRC_VOCAB["<unk>"])
-TRG_VOCAB.set_default_index(TRG_VOCAB["<unk>"])
+if not os.path.exists('model/SRC_VOCAB.pkl') or not os.path.exists('model/TRG_VOCAB.pkl'):
+    SRC_VOCAB = build_vocab_from_iterator(yield_tokens(train_data['src'], SRC_TOKENIZER),
+                                          specials=["<unk>", "<pad>", "<bos>", "<eos>"])
+    TRG_VOCAB = build_vocab_from_iterator(yield_tokens(train_data['trg'], TRG_TOKENIZER),
+                                          specials=["<unk>", "<pad>", "<bos>", "<eos>"])
+    SRC_VOCAB.set_default_index(SRC_VOCAB["<unk>"])
+    TRG_VOCAB.set_default_index(TRG_VOCAB["<unk>"])
 
+    # 保存词表
+    with open("model/SRC_VOCAB.pkl", "wb") as f:
+        pickle.dump(SRC_VOCAB, f)
+    with open("model/TRG_VOCAB.pkl", "wb") as f:
+        pickle.dump(TRG_VOCAB, f)
+    print("Vocab saved.")
 
+# 加载词表
+with open("model/SRC_VOCAB.pkl", "rb") as f:
+    SRC_VOCAB = pickle.load(f)
+with open("model/TRG_VOCAB.pkl", "rb") as f:
+    TRG_VOCAB = pickle.load(f)
+
+print(f"src vocab size: {len(SRC_VOCAB)}")
+print(f"trg vocab size: {len(TRG_VOCAB)}")
 def collate_batch(batch):
     """
     将一批次的数据填充到相同的长度，并转换为tensor
@@ -419,7 +435,8 @@ FORWARD_EXPANSION = 4
 HEADS = 8
 DROPOUT = 0.10
 # 统计训练数据最大长度
-MAX_LENGTH = max(max([ x.shape[1] for x, _ in train_loader]), max([ y.shape[1] for _, y in train_loader])) + 1
+# MAX_LENGTH = max(max([ x.shape[1] for x, _ in train_loader]), max([ y.shape[1] for _, y in train_loader])) + 1
+MAX_LENGTH = 128
 print("MAX_LENGTH:", MAX_LENGTH)
 
 model = Transformer(
@@ -515,7 +532,7 @@ def plot_loss(train_lossv, train_pplv, valid_lossv, valid_pplv, path):
 if TRAIN_FLAG == True:
     print("Training...")
     # Train
-    N_EPOCHS = 1000
+    N_EPOCHS = 300
     STRIP = 10
     CLIP = 1  # 梯度裁剪，防止梯度爆炸
 
