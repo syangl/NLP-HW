@@ -24,6 +24,8 @@ if not os.path.exists('out'):
 if not os.path.exists('model'):
     os.mkdir('model')
 
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
 TRAIN_FLAG = True
 
 # 设置随机种子以确保结果可重复
@@ -90,7 +92,6 @@ if not os.path.exists('model/SRC_VOCAB.pkl') or not os.path.exists('model/TRG_VO
     SRC_VOCAB.set_default_index(SRC_VOCAB["<unk>"])
     TRG_VOCAB.set_default_index(TRG_VOCAB["<unk>"])
 
-    # 保存词表
     with open("model/SRC_VOCAB.pkl", "wb") as f:
         pickle.dump(SRC_VOCAB, f)
     with open("model/TRG_VOCAB.pkl", "wb") as f:
@@ -107,7 +108,7 @@ print(f"src vocab size: {len(SRC_VOCAB)}")
 print(f"trg vocab size: {len(TRG_VOCAB)}")
 def collate_batch(batch):
     """
-    将一批次的数据填充到相同的长度，并转换为tensor
+    将一个batch数据填充到相同的长度，并转换为tensor
     """
     src_list, trg_list = [], []
     for (_src, _trg) in batch:
@@ -152,35 +153,32 @@ valid_dataset = TranslationDataset(valid_data['src'], valid_data['trg'], SRC_VOC
 test_dataset = TranslationDataset(test_data['src'], test_data['trg'], SRC_VOCAB, TRG_VOCAB)
 
 BATCH_SIZE = 32
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
 train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, collate_fn=collate_batch)
 valid_loader = DataLoader(valid_dataset, batch_size=BATCH_SIZE, shuffle=False, collate_fn=collate_batch)
 test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False, collate_fn=collate_batch)
 
 
 class PositionalEncoding(nn.Module):
-    def __init__(self, d_model, max_len=5000):
+    def __init__(self, embedding_dim, max_len=5000):
         """
-        :param d_model: 嵌入向量的维度
-        :param dropout: dropout 概率，默认为 0.1
+        :param embedding_dim: 嵌入向量的维度
         :param max_len: 最大序列长度，默认为 5000
         """
         super(PositionalEncoding, self).__init__()
         # self.dropout = nn.Dropout(p=dropout)
-        # 初始化一个形状为 (max_len, d_model) 的张量，存储位置编码
-        pe = torch.zeros(max_len, d_model)
+        # 初始化一个形状为 (max_len, embedding_dim) 的张量，存储位置编码
+        pe = torch.zeros(max_len, embedding_dim)
         # 初始化从 0 到 max_len 的位置索引张量
         position = torch.arange(0, max_len, dtype=torch.float).unsqueeze(1)
         # 计算位置编码的频率部分
-        div_term = torch.exp(torch.arange(0, d_model, 2).float() * (-math.log(10000.0) / d_model))
+        div_term = torch.exp(torch.arange(0, embedding_dim, 2).float() * (-math.log(10000.0) / embedding_dim))
         # 计算位置编码的正弦部分
         pe[:, 0::2] = torch.sin(position * div_term)
         # 计算位置编码的余弦部分
         pe[:, 1::2] = torch.cos(position * div_term)
         # 调整位置编码的形状，使其适合输入
         pe = pe.unsqueeze(0)
-        # 注册位置编码为缓冲区，以便在模型中使用
+        # 注册位置编码为缓冲区，以便在模型中使用，register_buffer的变量不会随参数更新
         self.register_buffer('pe', pe)
 
     def forward(self, x):
@@ -247,11 +245,9 @@ class TransformerBlock(nn.Module):
 
     def forward(self, value, key, query, mask):
         attention = self.attention(value, key, query, mask)
-
-        # Add skip connection, run through normalization and finally dropout
-        x = self.dropout(self.norm1(attention + query))
-        forward = self.feed_forward(x)
-        out = self.dropout(self.norm2(forward + x))
+        x = self.dropout(self.norm1(attention + query)) # 残差连接Add + 归一化Normalization
+        forward = self.feed_forward(x)  # 前馈神经网
+        out = self.dropout(self.norm2(forward + x)) # 残差连接Add + 归一化Normalization
         return out
 
 
@@ -271,7 +267,7 @@ class Encoder(nn.Module):
         self.embed_size = embed_size
         self.device = device
         self.word_embedding = nn.Embedding(src_vocab_size, embed_size)
-        self.position_embedding = PositionalEncoding(d_model=embed_size, max_len=max_length)
+        self.position_embedding = PositionalEncoding(embedding_dim=embed_size, max_len=max_length)
 
         self.layers = nn.ModuleList(
             [
@@ -288,8 +284,6 @@ class Encoder(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x, mask):
-        # N, seq_length = x.shape
-        # positions = torch.arange(0, seq_length).expand(N, seq_length).to(self.device)
         embed_x = self.word_embedding(x)
         out = self.dropout(self.position_embedding(embed_x))
 
@@ -320,8 +314,6 @@ class DecoderBlock(nn.Module):
 
 
 class Decoder(nn.Module):
-    """解码器部分，由多个解码器块堆叠而成"""
-
     def __init__(
             self,
             trg_vocab_size,
@@ -353,7 +345,6 @@ class Decoder(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x, enc_out, src_mask, target_mask):
-        # positions = torch.arange(0, seq_length).expand(N, seq_length).to(self.device)
         embed_x = self.word_embedding(x)
         out = self.dropout(self.position_embedding(embed_x))
 
@@ -510,21 +501,21 @@ def plot_loss(train_lossv, train_pplv, valid_lossv, valid_pplv, path):
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8))
 
     epochs = range(1, len(train_lossv) + 1)
-    # 绘制训练和验证的损失
+    # 绘制训练和验证的loss
     ax1.plot(epochs, train_lossv, 'bo-', label='Training Loss')
     ax1.plot(epochs, valid_lossv, 'ro-', label='Validation Loss')
     ax1.set_title('Training and Validation Loss')
     ax1.set_xlabel(f"Epochs(*{STRIP})")
     ax1.set_ylabel('Loss')
     ax1.legend()
-    # 绘制训练和验证的困惑度
+    # 绘制训练和验证的ppl
     ax2.plot(epochs, train_pplv, 'bo-', label='Training Perplexity')
     ax2.plot(epochs, valid_pplv, 'ro-', label='Validation Perplexity')
     ax2.set_title('Training and Validation Perplexity')
     ax2.set_xlabel(f"Epochs(*{STRIP})")
     ax2.set_ylabel('Perplexity')
     ax2.legend()
-    # 调整子图之间的间距
+    # 调整子图间距
     plt.tight_layout()
     plt.savefig(path)
     plt.show()

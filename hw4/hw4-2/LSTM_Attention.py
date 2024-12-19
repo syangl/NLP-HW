@@ -32,22 +32,15 @@ def get_tokenization(sentence):
     sentence = sentence.replace('< /e2 >', '</e2>')
     sentence = sentence.split()
 
-    assert '<e1>' in sentence
-    assert '<e2>' in sentence
-    assert '</e1>' in sentence
-    assert '</e2>' in sentence
-
     return sentence
 
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 SEED = 2024
-# 常量定义
 FIXED_SIZE = 128  # 128
 EMBEDDING_DIM = 50  # 50
 RELATION_COUNT = 19
-# POS_EMBEDDING_DIM = 100  # 100
 BATCH_SIZE = 30  # 30
 
 EPOCH = 300  # 300
@@ -69,42 +62,23 @@ class RelationDataset(Dataset):
             sentence = lines[i].strip().split('\t')[1]
             label = lines[i + 1].strip()
 
-            # e1_start = sentence.find('<e1>')
-            # e1_end = sentence.find('</e1>')
-            # e2_start = sentence.find('<e2>')
-            # e2_end = sentence.find('</e2>')
-            #
-            # sentence_clean = sentence.replace('<e1>', '').replace('</e1>', '').replace('<e2>', '').replace('</e2>', '')
-            # words = sentence_clean.split()
             words = get_tokenization(sentence)
 
-            # e1_pos = [min(max(j - e1_start, 0), max_len) for j in range(len(words))]
-            # e2_pos = [min(max(j - e2_start, 0), max_len) for j in range(len(words))]
-
-            indices = [word_to_idx.get(word, 1) for word in words]  # 1 is the index for unknown words
+            indices = [word_to_idx.get(word, 1) for word in words]  # 1 是 unknown words的index
 
             if len(indices) > max_len:
                 indices = indices[:max_len]
-                # e1_pos = e1_pos[:max_len]
-                # e2_pos = e2_pos[:max_len]
             else:
-                indices.extend([0] * (max_len - len(indices)))  # Padding with 0s
-                # e1_pos.extend([max_len] * (max_len - len(e1_pos)))
-                # e2_pos.extend([max_len] * (max_len - len(e2_pos)))
+                indices.extend([0] * (max_len - len(indices)))  # padding
 
             self.sentences.append(torch.tensor(indices, dtype=torch.long))
-            # self.e1_positions.append(torch.tensor(e1_pos, dtype=torch.long))
-            # self.e2_positions.append(torch.tensor(e2_pos, dtype=torch.long))
             self.labels.append(label)
 
     def __len__(self):
         return len(self.sentences)
 
     def __getitem__(self, idx):
-        return (self.sentences[idx],
-                # self.e1_positions[idx],
-                # self.e2_positions[idx],
-                self.labels[idx])
+        return (self.sentences[idx], self.labels[idx])
 
 
 
@@ -124,7 +98,7 @@ class Attention(nn.Module):
 
 # 注意力机制模块
 class BiLSTM_Attention(nn.Module):
-    def __init__(self, input_size, output_size, embedding_dim, hidden_dim): #, pos_size, pos_dim):
+    def __init__(self, input_size, output_size, embedding_dim, hidden_dim):
         super(BiLSTM_Attention, self).__init__()
         self.input_size = input_size
         self.embedding_dim = embedding_dim
@@ -132,15 +106,9 @@ class BiLSTM_Attention(nn.Module):
         self.hidden_dim = hidden_dim
         self.tag_size = output_size
 
-        # self.pos_size = pos_size
-        # self.pos_dim = pos_dim
-
         self.word_embeds = nn.Embedding(self.input_size, self.embedding_dim)
 
-        # self.pos1_embeds = nn.Embedding(self.pos_size, self.pos_dim)
-        # self.pos2_embeds = nn.Embedding(self.pos_size, self.pos_dim)
-
-        self.lstm = nn.LSTM(input_size=self.embedding_dim, hidden_size=self.hidden_dim // 2,#+ self.pos_dim * 2, hidden_size=self.hidden_dim // 2,
+        self.lstm = nn.LSTM(input_size=self.embedding_dim, hidden_size=self.hidden_dim // 2,
                             num_layers=1, bidirectional=True, bias=True, dropout=0, batch_first=True)
 
         self.attention_layer = Attention(self.hidden_dim)
@@ -154,14 +122,8 @@ class BiLSTM_Attention(nn.Module):
         self.dropout_att = nn.Dropout(p=0.5)
 
 
-    def forward(self, index): # , pos1, pos2):
+    def forward(self, index):
         word_embeds = self.word_embeds(index)
-        # pos1_embeds = self.pos1_embeds(pos1)
-        # pos2_embeds = self.pos2_embeds(pos2)
-
-        # Embedding layer
-        # embed_concat = torch.cat((word_embeds, pos1_embeds, pos2_embeds), dim=-1)
-        # embed_concat = self.dropout_emb(embed_concat)
         embed_concat = self.dropout_emb(word_embeds)
         # BiLSTM layer
         lstm_out, _ = self.lstm(embed_concat)
@@ -173,7 +135,7 @@ class BiLSTM_Attention(nn.Module):
         out = self.fc(att_output)
         return out
 
-# 绘制定损曲线
+
 def plot_loss_curve(train_lossv, output_dir):
     plt.figure(figsize=(10, 5))
     epochs = range(1, len(train_lossv) + 1)
@@ -186,7 +148,6 @@ def plot_loss_curve(train_lossv, output_dir):
     plt.show()
 
 
-# 评估函数
 def evaluate(model, data_loader, criterion, device, label_encoder, output_dir):
     model.eval()
     running_loss = 0.0
@@ -194,13 +155,10 @@ def evaluate(model, data_loader, criterion, device, label_encoder, output_dir):
     predicted_labels = []
 
     with torch.no_grad():
-        # for index, pos1, pos2, labels in data_loader:
-        #     index, pos1, pos2 = index.to(device), pos1.to(device), pos2.to(device)
         for index, labels in data_loader:
             index = index.to(device)
             labels = torch.LongTensor(label_encoder.transform(labels)).to(device)
 
-            # outputs = model(index, pos1, pos2)
             outputs = model(index)
             loss = criterion(outputs, labels)
             running_loss += loss.item()
@@ -236,8 +194,6 @@ with open(train_file, 'r', encoding='utf-8') as f:
     i = 0
     for i in range(0, len(lines), 4):
         sentence = lines[i].strip().split('\t')[1]
-        # sentence_clean = sentence.replace('<e1>', '').replace('</e1>', '').replace('<e2>', '').replace('</e2>', '')
-        # words = sentence_clean.split()
         words = get_tokenization(sentence)
         for word in words:
             word_counts[word] += 1
@@ -262,7 +218,7 @@ label_list = [
 label_encoder = LabelEncoder()
 label_encoder.fit(label_list)
 
-# 创建数据集和数据加载器
+# 创建数据集和loader
 train_dataset = RelationDataset(train_file, word_to_idx)
 test_dataset = RelationDataset(test_file, word_to_idx)
 
@@ -284,7 +240,7 @@ with open('model/model_structure.txt', 'w', encoding='utf-8') as f:
 
 # 损失函数和优化器
 criterion = nn.CrossEntropyLoss()
-lambda_l2 = 1e-5  # L2正则化强度
+lambda_l2 = 1e-5  # L2正则化
 optimizer = optim.Adadelta(model.parameters(), lr=1.0, weight_decay=lambda_l2)
 
 # 训练和评估
@@ -297,14 +253,11 @@ if TRAIN_FLAG == True:
         model.train()
         running_loss = 0.0
 
-        # for index, pos1, pos2, labels in train_loader:
-        #     index, pos1, pos2 = index.to(device), pos1.to(device), pos2.to(device)
         for index, labels in train_loader:
             index = index.to(device)
             labels = torch.LongTensor(label_encoder.transform(labels)).to(device)
 
             optimizer.zero_grad()
-            # outputs = model(index, pos1, pos2)
             outputs = model(index)
             loss = criterion(outputs, labels)
             loss.backward()
@@ -318,14 +271,13 @@ if TRAIN_FLAG == True:
             print(f"Epoch: {epoch + 1}/{EPOCH}\tTrain Loss: {avg_train_loss:.3f}")
             train_lossv.append(avg_train_loss)
 
-    # 绘制定损曲线
     plot_loss_curve(train_lossv, output_dir)
 
     # Save
-    torch.save(model.state_dict(), os.path.join(output_dir, 'BiLSTM_Attention_Model.pth'))
+    torch.save(model.state_dict(), 'model/BiLSTM_Attention_Model.pth')
     print("Model Saved")
 # Prediction
 model.eval()
-model.load_state_dict(torch.load(os.path.join(output_dir, 'BiLSTM_Attention_Model.pth')))
+model.load_state_dict(torch.load('model/BiLSTM_Attention_Model.pth'))
 evaluate(model, test_loader, criterion, device, label_encoder, output_dir)
 
